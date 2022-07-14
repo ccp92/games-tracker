@@ -19,7 +19,7 @@
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.2",
     "@types/jest": "^28.1.4",
-    "@types/node": "18.0.3",
+    "@types/node": "18.0.4",
     "@types/react": "17.0.40",
     "eslint": "8.19.0",
     "eslint-config-next": "12.2.2",
