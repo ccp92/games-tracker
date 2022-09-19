@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import { useUser } from "@auth0/nextjs-auth0";
@@ -24,11 +23,9 @@ const Home: NextPage = () => {
 
         {user && (
           <div>
-            <p>
-              You are logged in as {user.name} and you can now access all of our
-              super secret games content!
-            </p>
-            <a href="/api/auth/logout">Log out</a>
+            You are logged in as {user.name} and you can now access all of our
+            super secret games content!
+            <Link href="/api/auth/logout">Log out</Link>
           </div>
         )}
       </main>
