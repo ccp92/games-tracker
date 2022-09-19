@@ -3,8 +3,11 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
+import { useUser } from "@auth0/nextjs-auth0";
 
 const Home: NextPage = () => {
+  const { user, isLoading } = useUser();
+
   return (
     <div className={styles.container}>
       <Head>
@@ -18,6 +21,16 @@ const Home: NextPage = () => {
         <p className={styles.description}>
           Get started by <Link href="/games/add">adding a game</Link>
         </p>
+
+        {user && (
+          <div>
+            <p>
+              You are logged in as {user.name} and you can now access all of our
+              super secret games content!
+            </p>
+            <a href="/api/auth/logout">Log out</a>
+          </div>
+        )}
       </main>
     </div>
   );
