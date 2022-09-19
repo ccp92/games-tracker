@@ -2,8 +2,9 @@ import { NextPage } from "next";
 import Head from "next/head";
 import { Fragment } from "react";
 import AddGameForm from "../../components/AddGameForm";
+import { withPageAuthRequired } from "@auth0/nextjs-auth0";
 
-const AddGame: NextPage = () => {
+export default withPageAuthRequired(function AddGamePage() {
   return (
     <Fragment>
       <Head>
@@ -14,6 +15,4 @@ const AddGame: NextPage = () => {
       <AddGameForm />
     </Fragment>
   );
-};
-
-export default AddGame;
+});
