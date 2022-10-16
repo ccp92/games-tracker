@@ -1,14 +1,9 @@
 import { render, screen } from "@testing-library/react";
-import AddGame from "../../pages/games/add";
+import AddGameForm from "../AddGameForm";
 
 describe("AddGameForm", () => {
-  xit("renders the header", () => {
-    render(<AddGame />);
-    screen.getByRole("heading", { name: "Add Game" });
-  });
-
-  xit("renders the form elements", () => {
-    render(<AddGame />);
+  it("renders the form elements", () => {
+    render(<AddGameForm />);
     screen.getByLabelText("Game Name");
     screen.getByLabelText("Console");
     screen.getByLabelText("Completion Status");
