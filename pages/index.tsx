@@ -15,11 +15,10 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
+        <div>
+          <Link href="/games/add">Add Game</Link>
+        </div>
         <h1 className={styles.title}>Welcome to the Games Tracker!</h1>
-
-        <p className={styles.description}>
-          Get started by <Link href="/games/add">adding a game</Link>
-        </p>
 
         {user && (
           <div>
