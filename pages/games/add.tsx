@@ -1,4 +1,3 @@
-import { NextPage } from "next";
 import Head from "next/head";
 import { Fragment } from "react";
 import AddGameForm from "../../components/AddGameForm";
