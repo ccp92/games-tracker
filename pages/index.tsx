@@ -4,6 +4,7 @@ import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import { useUser } from "@auth0/nextjs-auth0";
 import LogoutButton from "../components/LogoutButton";
+import LoginButton from "../components/LoginButton";
 
 const Home: NextPage = () => {
   const { user } = useUser();
@@ -18,6 +19,7 @@ const Home: NextPage = () => {
       <main className={styles.main}>
         <div>
           <Link href="/games/add">Add Game</Link>
+          <LoginButton />
           <LogoutButton />
         </div>
 

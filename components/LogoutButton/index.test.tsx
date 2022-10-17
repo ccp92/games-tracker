@@ -1,5 +1,4 @@
 import { render, screen } from "@testing-library/react";
-import { useUser } from "@auth0/nextjs-auth0";
 
 import LogoutButton from "../LogoutButton";
 

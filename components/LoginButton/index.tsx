@@ -1,5 +1,14 @@
+import { useUser } from "@auth0/nextjs-auth0";
+import Link from "next/link";
+
 const LoginButton = () => {
-  return <button>Login</button>;
+  const { user } = useUser();
+
+  if (user) {
+    return null;
+  }
+
+  return <Link href="/api/auth/login">Login</Link>;
 };
 
 export default LoginButton;
